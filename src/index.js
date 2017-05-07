@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './checkout/index';
 import './index.css';
 import 'antd/dist/antd.css';
-import {BrowserRouter} from 'react-router-dom'
 import 'babel-polyfill'
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>,
+        <App/>,
     document.getElementById('root')
 );
