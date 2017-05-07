@@ -5,6 +5,7 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {login} from '../actions';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import {Row, Col} from 'antd';
 injectTapEventPlugin();
 
 class Login extends React.Component {
@@ -90,12 +91,16 @@ class Login extends React.Component {
                     </div>
 
                 </div>
-                <div style={{marginLeft: '400px'}}>
-                    <p>Notes:</p>
-                    <p>Enter Unilever or Apple or Nike or Ford (case-insensitive) as username for privileged
-                        customers</p>
-                    <p>any other username will be treated as non-privileged customers.</p>
-                    <p>Enter any string as password.</p>
+                <div>
+                    <Row>
+                        <Col span={12} offset={7}>
+                            <p>Notes:</p>
+                            <p>Enter Unilever or Apple or Nike or Ford (case-insensitive) as username for privileged
+                                customers</p>
+                            <p>any other username will be treated as non-privileged customers.</p>
+                            <p>Enter any string as password.</p>
+                        </Col>
+                    </Row>
                 </div>
             </div>
         )
