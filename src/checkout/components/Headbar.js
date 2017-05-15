@@ -11,7 +11,7 @@ import {grey50} from 'material-ui/styles/colors';
 import {logout} from '../actions';
 import UserProfileCard from './UserProfileCard'
 
-export class HeadBar extends React.Component {
+export class HeadBar extends Component {
 
   constructor(props) {
     super(props);

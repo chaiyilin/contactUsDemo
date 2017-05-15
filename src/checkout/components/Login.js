@@ -93,7 +93,7 @@ class Login extends React.Component {
                 </div>
                 <div>
                     <Row>
-                        <Col span={12} offset={7}>
+                        <Col span={12} offset={9}>
                             <p>Notes:</p>
                             <p>Enter Unilever or Apple or Nike or Ford (case-insensitive) as username for privileged
                                 customers</p>
