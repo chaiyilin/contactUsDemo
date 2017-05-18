@@ -1,32 +1,38 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import {login} from '../actions';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {Row, Col} from 'antd';
 injectTapEventPlugin();
 
-class Login extends React.Component {
+class ContactUs extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            username: '',
-            password: ''
+            name: '',
+            email: '',
+            message: ''
         };
     }
 
-    usernameChange = (event) => {
+    nameChange = (event) => {
         this.setState({
             username: event.target.value
         });
         this.validateRequired('username', event.target.value);
     };
 
-    passwordChange = (event) => {
+    emailChange = (event) => {
+        this.setState({
+            password: event.target.value
+        });
+        this.validateRequired('password', event.target.value);
+    };
+
+    messageChange = (event) => {
         this.setState({
             password: event.target.value
         });
@@ -65,44 +71,31 @@ class Login extends React.Component {
     render() {
         const {loginFormContainerStyle, loginFormStyle, fieldsContainerStyle, buttonStyle} = this.props;
         return (
-            <div>
-                <div style={loginFormContainerStyle}>
-                    <div>
-                        <Paper style={loginFormStyle} zDepth={3}>
-                            <div style={fieldsContainerStyle}>
-                                <TextField floatingLabelText="User Name"
-                                           value={this.state.username}
-                                           onChange={this.usernameChange}
-                                           onKeyDown={this.onSubmit}
-                                           errorText={this.state.usernameError}/>
-                                <TextField floatingLabelText="Password" type="password"
-                                           value={this.state.password}
-                                           onChange={this.passwordChange}
-                                           onKeyDown={this.onSubmit}
-                                           errorText={this.state.passwordError}/>
-                                <RaisedButton label='Login'
-                                              labelPosition={'before'}
-                                              fullWidth={true}
-                                              primary={true}
-                                              style={buttonStyle}
-                                              onTouchTap={this.validateForm}/>
-                            </div>
-                        </Paper>
-                    </div>
-
-                </div>
+            <div style={loginFormContainerStyle}>
                 <div>
-                    <Row>
-                        <Col span={12} offset={9}>
-                            <p>Notes:</p>
-                            <p>Enter Unilever or Apple or Nike or Ford (case-insensitive) as username for privileged
-                                customers</p>
-                            <p>any other username will be treated as non-privileged customers.</p>
-                            <p>Enter any string as password.</p>
-                        </Col>
-                    </Row>
+                    <Paper style={loginFormStyle} zDepth={3}>
+                        <div style={fieldsContainerStyle}>
+                            <TextField floatingLabelText="User Name"
+                                       value={this.state.username}
+                                       onChange={this.nameChange}
+                                       onKeyDown={this.onSubmit}
+                                       errorText={this.state.usernameError}/>
+                            <TextField floatingLabelText="Password" type="password"
+                                       value={this.state.password}
+                                       onChange={this.emailChange}
+                                       onKeyDown={this.onSubmit}
+                                       errorText={this.state.passwordError}/>
+                            <RaisedButton label='Login'
+                                          labelPosition={'before'}
+                                          fullWidth={true}
+                                          primary={true}
+                                          style={buttonStyle}
+                                          onTouchTap={this.validateForm}/>
+                        </div>
+                    </Paper>
                 </div>
             </div>
+
         )
     }
 }

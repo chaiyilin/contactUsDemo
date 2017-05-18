@@ -27,7 +27,7 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
-    "antd": "^2.9.1",
+    "bluebird": "^3.5.0",
     "lodash": "^4.17.4",
     "material-ui": "^0.18.0",
     "react": "^15.5.4",
@@ -37,7 +37,9 @@
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
-    "redux-thunk": "^2.2.0"
+    "redux-saga": "^0.15.3",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^1.4.6"
   },
   "scripts": {
     "prebuild": "del-cli dist -f",

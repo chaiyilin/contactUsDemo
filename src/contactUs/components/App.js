@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import HeadBar from './headbar';
-import Login from './login';
-import Products from './Products';
+import ContactUs from './ContactUs';
 
 class App extends Component {
 
@@ -14,14 +12,11 @@ class App extends Component {
         const {currentUser} = this.props;
         const app = (
             <div >
-                <HeadBar/>
-                <Products/>
+                <ContactUs/>
             </div>
         );
 
-        return (
-            currentUser ? app : (<Login/>)
-        )
+        return app
     }
 }
 
