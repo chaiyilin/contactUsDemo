@@ -29,9 +29,9 @@ const mapStateToProps = state => {
 
 const centre = {
     display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center'
+
 };
 
 export default connect(mapStateToProps)(App);

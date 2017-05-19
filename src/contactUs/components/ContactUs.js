@@ -72,28 +72,26 @@ class ContactUs extends Component {
         const {loginFormContainerStyle, loginFormStyle, fieldsContainerStyle, buttonStyle} = this.props;
         return (
             <div style={loginFormContainerStyle}>
-                <div>
-                    <Paper style={loginFormStyle} zDepth={3}>
-                        <div style={fieldsContainerStyle}>
-                            <TextField floatingLabelText="User Name"
-                                       value={this.state.username}
-                                       onChange={this.nameChange}
-                                       onKeyDown={this.onSubmit}
-                                       errorText={this.state.usernameError}/>
-                            <TextField floatingLabelText="Password" type="password"
-                                       value={this.state.password}
-                                       onChange={this.emailChange}
-                                       onKeyDown={this.onSubmit}
-                                       errorText={this.state.passwordError}/>
-                            <RaisedButton label='Login'
-                                          labelPosition={'before'}
-                                          fullWidth={true}
-                                          primary={true}
-                                          style={buttonStyle}
-                                          onTouchTap={this.validateForm}/>
-                        </div>
-                    </Paper>
-                </div>
+                <Paper style={loginFormStyle} zDepth={3}>
+                    <div style={fieldsContainerStyle}>
+                        <TextField floatingLabelText="User Name"
+                                   value={this.state.username}
+                                   onChange={this.nameChange}
+                                   onKeyDown={this.onSubmit}
+                                   errorText={this.state.usernameError}/>
+                        <TextField floatingLabelText="Password" type="password"
+                                   value={this.state.password}
+                                   onChange={this.emailChange}
+                                   onKeyDown={this.onSubmit}
+                                   errorText={this.state.passwordError}/>
+                        <RaisedButton label='Login'
+                                      labelPosition={'before'}
+                                      fullWidth={true}
+                                      primary={true}
+                                      style={buttonStyle}
+                                      onTouchTap={this.validateForm}/>
+                    </div>
+                </Paper>
             </div>
 
         )
