@@ -25,28 +25,12 @@ class ContactUs extends Component {
                 <Paper className={`${contactUsFormStyle}`} zDepth={3}>
                     <form onSubmit={handleSubmit}>
                         <div className={`${fieldsContainerStyle}`}>
-                            <Field
-                                name="name"
-                                component={textFieldRender}
-                                validate={[required, maxLength20]}
-
-                                floatingLabelText="Name"
-                            />
-                            <Field
-                                name="email"
-                                component={textFieldRender}
-                                validate={[required, email]}
-
-                                floatingLabelText="Email"
-                            />
-                            <Field
-                                name="message"
-                                component={textFieldRender}
-                                validate={[required, maxLength200]}
-
-                                multiLine={true}
-                                floatingLabelText="Message"
-                            />
+                            <Field name="name" component={textFieldRender} validate={[required, maxLength20]}
+                                   floatingLabelText="Name *"/>
+                            <Field name="email" component={textFieldRender} validate={[required, email]}
+                                   floatingLabelText="Email *"/>
+                            <Field name="message" component={textFieldRender} validate={[required, maxLength200]}
+                                   multiLine={true} floatingLabelText="Message *"/>
                             <RaisedButton
                                 className={`${buttonStyle}`}
                                 type="submit"

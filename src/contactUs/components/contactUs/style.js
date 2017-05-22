@@ -15,9 +15,11 @@ export const contactUsFormStyle = css({
 export const fieldsContainerStyle = css({
     padding: '0 20px 20px',
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
     flexDirection: 'column'
+})
+
+export const fieldStyle = css({
+    width: '100vw'
 })
 
 export const buttonStyle = css({
