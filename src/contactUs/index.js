@@ -3,6 +3,7 @@ import {render} from 'react-dom'
 import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import ContactUs from './components/contactUs'
+import Notification from './components/Notification'
 import reducers from './reducers'
 import thunk from 'redux-thunk'
 import {createLogger} from 'redux-logger'
@@ -32,7 +33,10 @@ const muiTheme = getMuiTheme({
 const Index = () => (
     <Provider store={store}>
         <MuiThemeProvider muiTheme={muiTheme}>
-            <ContactUs/>
+            <div>
+                <ContactUs/>
+                <Notification/>
+            </div>
         </MuiThemeProvider>
     </Provider>
 )
