@@ -18,10 +18,6 @@ export const fieldsContainerStyle = css({
     flexDirection: 'column'
 })
 
-export const fieldStyle = css({
-    width: '100vw'
-})
-
 export const buttonStyle = css({
     marginTop: '25px'
 })
