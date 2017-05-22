@@ -1,16 +1,12 @@
 import * as actions from './index'
-import * as types from './actionTypes'
+import {testData} from '../testData'
 
 describe('actions', () => {
-    it('should create an action to updateAdAmount', () => {
-        const text = 'Finish docs'
+    it('should create an action to SUBMIT', () => {
         const expectedAction = {
-            type: types.UPDATE_AD_AMOUNT,
-            payload: {
-                productId:1,
-                amount:2
-            }
+            type: 'SUBMIT',
+            payload: testData
         };
-        expect(actions.updateAdAmount(1,2)).toEqual(expectedAction)
+        expect(actions.submit(expectedAction.payload)).toEqual(expectedAction)
     })
 });

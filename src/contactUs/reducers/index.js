@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 import { reducer as form } from 'redux-form'
 
-function saved(state=false, action) {
+export function saved(state=false, action) {
     switch (action.type) {
         case 'SUBMIT_SUCCEEDED':
             return {...state,saved:true}
