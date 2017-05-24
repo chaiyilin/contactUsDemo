@@ -4,8 +4,7 @@ import ReactDOM from 'react-dom'
 import App from './contactUs/index'
 import './index.css'
 
-
 ReactDOM.render(
-        <App/>,
+  <App />,
     document.getElementById('root')
 )
