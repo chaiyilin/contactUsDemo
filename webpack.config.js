@@ -7,7 +7,10 @@ module.exports = {
     // webpack
     // https://webpack.js.org/configuration/devtool/
     // https://github.com/webpack/webpack/issues/2145
-  devtool: 'cheap-module-eval-source-map',
+  //devtool: 'cheap-module-eval-source-map',
+
+  //http://moduscreate.com/optimizing-react-es6-webpack-production-build/
+  devtool: 'cheap-module-source-map',
   entry: path.join(__dirname, '/src/index.js'),
   output: {
     path: path.join(__dirname, '/dist'),
@@ -20,11 +23,11 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },
+      }/*,
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
-      }
+      }*/
     ]
   },
   plugins: [
