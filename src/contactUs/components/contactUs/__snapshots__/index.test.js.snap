@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ContactUs 1`] = `
+<div
+  className="css-1ir39kl"
+>
+  <Paper
+    circle={false}
+    className="css-1pxor53"
+    rounded={true}
+    transitionEnabled={true}
+    zDepth={3}
+  >
+    <form>
+      <div
+        className="css-v9t76d"
+      >
+        <Field
+          component={[Function]}
+          floatingLabelText="Name *"
+          name="name"
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
+        />
+        <Field
+          component={[Function]}
+          floatingLabelText="Email *"
+          name="email"
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
+        />
+        <Field
+          component={[Function]}
+          floatingLabelText="Message *"
+          multiLine={true}
+          name="message"
+          validate={
+            Array [
+              [Function],
+              [Function],
+            ]
+          }
+        />
+        <RaisedButton
+          className="css-a3bf9n"
+          disabled={false}
+          fullWidth={true}
+          label="Submit"
+          labelPosition="before"
+          primary={true}
+          secondary={false}
+          type="submit"
+        />
+      </div>
+    </form>
+  </Paper>
+</div>
+`;

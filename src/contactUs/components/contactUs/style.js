@@ -8,8 +8,8 @@ export const contactUsFormContainerStyle = css({
 })
 
 export const contactUsFormStyle = css({
-  width: '30vw',
-  marginTop: '-30vh'
+  marginTop: '-30vh',
+  width: '30vw'
 })
 
 export const fieldsContainerStyle = css({

@@ -1,5 +1,5 @@
 import React from 'react'
-import {wrapper as ContactUs} from './index'
+import {ContactUs} from './component'
 import {submit} from '../../actions'
 
 //Testing basic component rendering

@@ -10,7 +10,7 @@ import {submit} from '../../actions'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-class ContactUs extends Component {
+export class ContactUs extends Component {
   render () {
     const {handleSubmit, submitting} = this.props
     return (
