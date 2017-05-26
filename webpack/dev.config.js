@@ -9,8 +9,11 @@ module.exports = merge(baseConfig, {
     filename: 'bundle-[hash].js'
   },
   plugins: [
-
-
-    new OpenBrowserPlugin({ url: 'http://localhost:8080', browser: 'chrome' })
+    new OpenBrowserPlugin({url: 'http://localhost:8080', browser: 'chrome'})
   ],
+  devServer: {
+    contentBase: path.join(__dirname, '/dist'),
+    historyApiFallback: true,
+    inline: true
+  }
 });
