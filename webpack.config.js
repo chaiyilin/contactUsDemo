@@ -7,7 +7,7 @@ module.exports = {
   // webpack
   // https://webpack.js.org/configuration/devtool/
   // https://github.com/webpack/webpack/issues/2145
-  devtool: 'cheap-module-eval-source-map',
+  //devtool: 'cheap-module-eval-source-map',
 
   //http://moduscreate.com/optimizing-react-es6-webpack-production-build/
   //devtool: 'cheap-module-source-map',
@@ -31,13 +31,17 @@ module.exports = {
     ]
   },
   plugins: [
-    //new webpack.BannerPlugin('Copyright Flying Unicorns inc.'),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, '/src/index.tmpl.html'),
       favicon: 'favicon.ico'
     }),
-    // new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin(
+      {
+        compressor: {
+          warnings: false,
+        }
+      }
+    ),
     new OpenBrowserPlugin({url: 'http://localhost:8080', browser: 'chrome'})
   ],
   // webpack-dev-server
