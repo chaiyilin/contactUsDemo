@@ -11,7 +11,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
 export class ContactUs extends Component {
-  render () {
+  render() {
     const {handleSubmit, submitting} = this.props
     return (
       <div className={`${contactUsFormContainerStyle}`}>
@@ -19,11 +19,11 @@ export class ContactUs extends Component {
           <form onSubmit={handleSubmit}>
             <div className={`${fieldsContainerStyle}`}>
               <Field name='name' component={textFieldRender} validate={[required, maxLength20]}
-                floatingLabelText='Name *' />
+                     floatingLabelText='Name *'/>
               <Field name='email' component={textFieldRender} validate={[required, email]}
-                floatingLabelText='Email *' />
+                     floatingLabelText='Email *'/>
               <Field name='message' component={textFieldRender} validate={[required, maxLength200]}
-                multiLine floatingLabelText='Message *' />
+                     multiLine floatingLabelText='Message *'/>
               <RaisedButton
                 className={`${buttonStyle}`}
                 type='submit'
@@ -31,8 +31,7 @@ export class ContactUs extends Component {
                 disabled={submitting}
                 labelPosition={'before'}
                 fullWidth
-                primary
-                            />
+                primary/>
             </div>
           </form>
         </Paper>
@@ -40,5 +39,5 @@ export class ContactUs extends Component {
     )
   }
 }
-export default connect(null, {submit})(reduxForm({form: 'ContactUs'})(ContactUs))
-// export default reduxForm({form: 'ContactUs'})(ContactUs);
+//export default connect(null, {submit})(reduxForm({form: 'ContactUs'})(ContactUs))
+export default reduxForm({form: 'ContactUs'})(ContactUs);

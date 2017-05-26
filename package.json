@@ -50,11 +50,11 @@
   "scripts": {
     "prebuild": "del-cli dist -f",
     "build": "webpack",
-    "build-prod": "cross-env NODE_ENV=production && webpack –config ./webpack.config.prod.js --progress",
+    "build-prod": "cross-env NODE_ENV=production && webpack –-config ./webpack.config.js",
     "//build-prod": "cross-env NODE_ENV=production && yarn run build",
     "execute": "node dist/bundle.js",
     "//start": "yarn install && yarn build && webpack-dev-server",
-    "start": "cross-env NODE_ENV=development && yarn install && webpack-dev-server --config ./webpack.config.js",
+    "start": "yarn install && cross-env NODE_ENV=development &&  yarn build && webpack-dev-server --config ./webpack.config.js",
     "test": "jest",
     "test:watch": "yarn test -- --watch",
     "sd": "standard",
