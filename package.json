@@ -30,7 +30,6 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
-    "bluebird": "^3.5.0",
     "glamor": "^2.20.25",
     "glamorous": "^3.15.0",
     "lodash": "^4.17.4",
@@ -63,6 +62,10 @@
   "jest": {
     "setupFiles": [
       "./test-setup.js"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
     ],
     "snapshotSerializers": [
       "<rootDir>/node_modules/enzyme-to-json/serializer"

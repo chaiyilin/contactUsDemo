@@ -6,7 +6,7 @@ exports[`should render ContactUs 1`] = `
 >
   <Paper
     circle={false}
-    className="css-1pxor53"
+    className="css-1be6uqv"
     rounded={true}
     transitionEnabled={true}
     zDepth={3}

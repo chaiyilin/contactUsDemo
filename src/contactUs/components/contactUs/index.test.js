@@ -11,9 +11,9 @@ it('should render ContactUs', () => {
 });
 
 //Testing props
-it('should render a document title', () => {
+/*it('should render a document title', () => {
   const wrapper = shallow(
     <ContactUs onSubmit={submit} />
   );
   expect(wrapper.prop('onSubmit')).toEqual('submit');
-});
+});*/
