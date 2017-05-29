@@ -9,10 +9,6 @@ describe('SUBMIT_SUCCEEDED reducer', () => {
       type: 'SUBMIT_SUCCEEDED',
       payload: testData
     }
-    expect(
-      saved(undefined, action)
-    ).toEqual({
-      saved: true
-    })
+    expect(saved(undefined, action)).toEqual({saved: true})
   })
 })
