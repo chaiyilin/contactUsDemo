@@ -5,7 +5,7 @@ export const submit = (contactMeMessage) => {
     setTimeout(()=>{
       store.set('contactMeMessage', JSON.stringify(contactMeMessage))
       resolve(contactMeMessage)
-    },5000)
+    },1000)
 
 
   })
