@@ -4,7 +4,6 @@ import {Provider} from 'react-redux'
 import ContactUs from './components/contactUs'
 import Notification from './components/Notification'
 import reducers from './reducers'
-import thunk from 'redux-thunk'
 import {createLogger} from 'redux-logger'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {cyan500} from 'material-ui/styles/colors'
@@ -12,7 +11,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import createSagaMiddleware from 'redux-saga'
 import sagas from './sagas'
 
-const middleware = [thunk]
+const middleware = []
 if (process.env.NODE_ENV !== 'production') {
   middleware.push(createLogger())
 }

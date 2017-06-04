@@ -4,7 +4,9 @@ import { reducer as form } from 'redux-form'
 export function saved (state = false, action) {
   switch (action.type) {
     case 'SUBMIT_SUCCEEDED':
-      return {...state, saved: true}
+      return true
+    case 'SUBMIT_SUCCEEDED_EXPIRED':
+      return false
     default:
       return state
   }
