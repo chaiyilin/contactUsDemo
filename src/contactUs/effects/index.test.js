@@ -1,5 +1,3 @@
-/* global test expect */
-
 import {submit} from './index'
 import store from 'store'
 import {testData} from '../testData'
@@ -9,7 +7,7 @@ jest.mock('store', () => ({
 }))
 test('should submit', () => {
   return submit(testData).then(data => {
-    expect(data).toBe(testData)
+      expect(data).toBe(testData)
     expect(store.set).toBeCalledWith('contactMeMessage', JSON.stringify(testData));
   })
 })

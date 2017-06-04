@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 import * as actions from './index'
 import {testData} from '../testData'
 

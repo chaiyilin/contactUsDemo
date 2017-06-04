@@ -1,5 +1,3 @@
-/* global describe it expect */
-
 import {saved} from './index'
 import {testData} from '../testData'
 
